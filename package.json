@@ -1,0 +1,37 @@
+{
+  "name": "kampung-desa",
+  "version": "1.0.0",
+  "homepage": "https://api-kampungdesa.herokuapp.com",
+  "description": "[Backend] desa cerdas bersahaja",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "client-install": "npm install --prefix client",
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "Let's Dev",
+  "license": "SEE LICENSE IN LICENSE",
+  "dependencies": {
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "gridfs-stream": "^1.1.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.6.7",
+    "multer": "^1.4.2",
+    "multer-gridfs-storage": "^3.3.0",
+    "node": "^12.7.0",
+    "package": "^1.0.1",
+    "package.json": "^2.0.1",
+    "passport": "^0.4.0",
+    "passport-jwt": "^4.0.0",
+    "prop-types": "^15.7.2",
+    "validator": "^11.1.0"
+  },
+  "devDependencies": {
+    "nodemon": "^1.19.1"
+  }
+}
