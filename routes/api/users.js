@@ -112,4 +112,6 @@ router.post("/login", cors(), (req, res) => {
   })
 })
 
+router.get("/test", cors(), (req, res) => res.json({ message: "It works" }))
+
 module.exports = router
