@@ -84,6 +84,12 @@ app.use(cors({ credentials: true, origin: true }))
 app.use("/api/users", user)
 app.use("/api/posts", post)
 
+app.get("/", (req, res) => {
+  res.json({
+    msg: "ok, server up!"
+  })
+})
+
 // @route GET /image/:filename
 // @desc Display Image
 app.get("/image/:filename", (req, res) => {

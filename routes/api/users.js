@@ -65,6 +65,7 @@ router.post("/login", cors(), (req, res) => {
   const password = req.body.password
 
   const { errors, isValid } = validationLogin(req.body)
+  console.log("ini REQUEST", req.body)
 
   if (!isValid) {
     return res.status(400).json(errors)
@@ -95,6 +96,7 @@ router.post("/login", cors(), (req, res) => {
               expiresIn: 3600
             },
             (err, token) => {
+              
               res.json({
                 success: true,
                 // use Bearer protocol format
